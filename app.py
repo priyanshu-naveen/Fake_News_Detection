@@ -15,8 +15,7 @@ REAL_THRESHOLD = 0.70
 FAKE_THRESHOLD = 0.30
 
 MODEL_PATH = "fake_news_model.h5"
-GDRIVE_FILE_ID = "1GX0HxcBWhz4FpB6DPGVaKk8wZ0cMj"   # <<< UPDATE THIS
-
+GDRIVE_FILE_ID = "1GX0HxcBWhz4FpB6DPGVaKk8wZ0cMj-zO"   
 st.set_page_config(page_title="Fake News Detector", layout="centered")
 
 # ---------------- DOWNLOAD MODEL FROM GDRIVE ----------------
@@ -117,3 +116,4 @@ if st.button("Analyze News"):
 
         except Exception as e:
             st.error("Failed to extract article. Try a different link.")
+
