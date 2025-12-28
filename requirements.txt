@@ -1,0 +1,8 @@
+streamlit
+tensorflow
+numpy
+pandas
+scikit-learn
+newspaper3k
+lxml_html_clean
+gdown
