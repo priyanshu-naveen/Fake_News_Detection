@@ -15,14 +15,14 @@ REAL_THRESHOLD = 0.70
 FAKE_THRESHOLD = 0.30
 
 MODEL_PATH = "fake_news_model.h5"
-GDRIVE_FILE_ID = "1GX0HxcBWhz4FpB6DPGVaKk8wZ0cMj-zO"   
+GDRIVE_FILE_ID = "https://drive.google.com/file/d/1GX0HxcBWhz4FpB6DPGVaKk8wZ0cMj-zO/view?usp=sharing"   
 st.set_page_config(page_title="Fake News Detector", layout="centered")
 
 # ---------------- DOWNLOAD MODEL FROM GDRIVE ----------------
 if not os.path.exists(MODEL_PATH):
     with st.spinner("Downloading model from Google Drive..."):
         gdown.download(
-            f"https://drive.google.com/uc?id={GDRIVE_FILE_ID}",
+            f"https://drive.google.com/file/d/1GX0HxcBWhz4FpB6DPGVaKk8wZ0cMj-zO/view?usp=sharing",
             MODEL_PATH,
             quiet=False
             fuzzy=True
@@ -117,5 +117,6 @@ if st.button("Analyze News"):
 
         except Exception as e:
             st.error("Failed to extract article. Try a different link.")
+
 
 
