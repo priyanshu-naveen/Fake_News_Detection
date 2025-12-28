@@ -25,6 +25,7 @@ if not os.path.exists(MODEL_PATH):
             f"https://drive.google.com/uc?id={GDRIVE_FILE_ID}",
             MODEL_PATH,
             quiet=False
+            fuzzy=True
         )
 # ---------------- LOAD MODEL ----------------
 model = tf.keras.models.load_model(MODEL_PATH)
@@ -116,4 +117,5 @@ if st.button("Analyze News"):
 
         except Exception as e:
             st.error("Failed to extract article. Try a different link.")
+
 
